@@ -1,0 +1,56 @@
+.hamburguesa
+{
+   margin: 0 auto;
+   display: block;
+   width: 40px;
+   height: 36px;
+   padding: 10px;
+   border-radius: 7px;
+   background: #666;
+   color: white;
+   cursor: pointer;
+   position: relative;
+}
+
+.hamburguesa span
+{
+   display: block;
+   width: 40px;
+   height: 4px;
+   background: white;
+   margin-top: 7px;
+   border-radius: 100px;
+}
+
+label
+{
+   /* cursor: pointer; */
+}
+
+#menu-toggle
+{
+   display: none;
+}
+
+#trickMenu
+{
+   display: none;
+   text-align: center;
+   background: white;
+   padding: 10px 0;
+   font-size: 1.5rem;
+}
+
+#trickMenu li a
+{
+   display: block;
+   padding: 10px 0;
+   color: rgb(88, 88, 88);
+   text-decoration: none;
+}
+
+#menu-toggle:checked + #trickMenu
+{
+   display: block;
+}
+

@@ -1,0 +1,35 @@
+body {
+	margin: 0;
+}
+
+div {
+	text-align: center;
+	color: white;
+}
+
+.parallax {
+	background-color: black;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+
+.text {
+	position: relative;
+	top: 50%;
+}
+
+.block {
+	background-color: black;
+	height: 1000px;
+}
+
+#img1 {
+	background-image: url("https://cdn.pixabay.com/photo/2019/04/10/23/51/animal-4118585_1280.jpg");
+}
+
+#img2 {
+	background-image: url("https://cdn.pixabay.com/photo/2015/03/27/13/16/maine-coon-694730_1280.jpg");
+}

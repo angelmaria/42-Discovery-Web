@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script>
+        function calcuMath() {
+            var z;
+            var x = parseInt(document.getElementById("firstNum").value, 10);
+            
+            var y = parseInt(document.getElementById("secNum").value, 10);
+
+            // Confirma división o modulo por 0 antes de realizar el cálculo
+            if ((document.getElementById("fallDown").value == "divi" || document.getElementById("fallDown").value == "modul") && y == 0) {
+            alert("It's over 9000!");
+            document.getElementById("result").innerHTML = "";
+            console.log("It's over 9000!");
+            return; // Sale de la función antes de mostrar el mensaje de error
+            }
+
+            var selection = document.getElementById("fallDown").value;
+
+            if (selection == "add") {
+                z = parseFloat(x) + parseFloat(y);
+            }
+            if (selection == "less") {
+                z = parseFloat(x) - parseFloat(y);
+            }
+            if (selection == "multi") {
+                z = parseFloat(x) * parseFloat(y);
+            }
+            if (selection == "divi") {
+                z = parseFloat(x) / parseFloat(y);
+            }
+            if (selection == "modul") {
+                z = parseFloat(x) % parseFloat(y);
+            }
+
+            if (x >= 0 && y >= 0) {
+                document.getElementById("result").innerHTML = "The result is " + z + ".";
+                alert(document.getElementById("result").innerHTML);
+                console.log(z);
+
+            } else {
+                alert("Error :(");
+            }
+        }
+        // setTimeout(function(){ alert("Please, use me"); }, 3000);
+        setTimeout(saludo, 30000);
+        function saludo() {
+            alert("Please, use me");
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <p>Para realizar un cáculo introduce dos números y elije la opción correspondiente:</p>
+        <input type="text" id="firstNum" pattern="[0-9]+" />
+        <select class="form-select" id="fallDown">
+            <option>Select</option>
+            <option value="add" id="add">+</option>
+            <option value="less" id="less">-</option>
+            <option value="multi" id="multi">*</option>
+            <option value="divi" id="divi">/</option>
+            <option value="modul" id="modul">%</option>
+        </select>
+        <input type="text" id="secNum" pattern="[0-9]+" /><br>
+        <input type="submit" value="Try Me!" onclick="calcuMath()">
+        <!-- <button onclick="calcuMath()">Try me!</button> -->
+        <p id="result"></p>
+    </div>
+</body>
+</html>
